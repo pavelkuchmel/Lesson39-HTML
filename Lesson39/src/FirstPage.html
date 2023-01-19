@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        p { color : red }
+        h1 { color : green }
+    </style>
+    <title>First HTML lesson...</title>
+</head>
+<body>
+    <h1>This...</h1>
+    <p>...My first page</p>
+    <!--<ul>Список группы:
+        <li>Кучмель Павел</li>
+        <li>Никифоров Павел</li></ul>
+    <ol>Номерованный список группы:
+        <li>Кучмель Павел</li>
+        <li>Никифоров Павел</li>
+    </ol>-->
+    <ul>
+        Список напитков:
+        <li>Кофе:
+            <ul>
+                <li>Эспрессо</li>
+                <li>Капуччино</li>
+                <li>Мокачинно</li>
+            </ul>
+        </li>
+        <li>Чай:
+            <ul>
+                <li>Черный</li>
+                <li>Зеленый</li>
+                <li>Крассный</li>
+            </ul>
+        </li>
+    </ul>
+    <form name="search">
+        <input type="text" name="key"></input>
+        <button name="send">Отправить</button>
+    </form>
+    <script>
+    function sendForm(e){
+    // получаем значение поля key
+    var keyBox = document.search.key;
+    var val = keyBox.value;
+
+    if(val.length>5){
+        alert("Недопустимая длина строки");
+        e.preventDefault();
+    }
+    else
+        alert("Отправка разрешена");
+    }
+
+    var sendButton = document.search.send;
+    sendButton.addEventListener("click", sendForm);
+</script>
+</body>
+</html>
